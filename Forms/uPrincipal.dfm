@@ -10,5 +10,13 @@ object frmPrincipal: TfrmPrincipal
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Menu = menuPrincipal
   TextHeight = 15
+  object menuPrincipal: TMainMenu
+    Left = 216
+    Top = 152
+    object Cliente1: TMenuItem
+      Caption = 'Fornecedor'
+    end
+  end
 end

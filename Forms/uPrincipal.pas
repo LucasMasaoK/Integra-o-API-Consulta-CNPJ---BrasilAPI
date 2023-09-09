@@ -4,10 +4,12 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
 
 type
   TfrmPrincipal = class(TForm)
+    menuPrincipal: TMainMenu;
+    Cliente1: TMenuItem;
   private
     { Private declarations }
   public

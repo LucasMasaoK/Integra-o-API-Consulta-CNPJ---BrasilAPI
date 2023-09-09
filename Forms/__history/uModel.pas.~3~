@@ -1,0 +1,47 @@
+unit uModel;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
+  FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
+  FireDAC.Stan.Async, FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client, uDataModule;
+
+type
+  TfrmModel = class(TForm)
+    Panel1: TPanel;
+    btnNovo: TBitBtn;
+    btnEditar: TBitBtn;
+    btnSalvar: TBitBtn;
+    btnCancelar: TBitBtn;
+    btnPesquisar: TBitBtn;
+    bdQuery: TFDQuery;
+    procedure btnNovoClick(Sender: TObject);
+    procedure btnEditarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmModel: TfrmModel;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmModel.btnEditarClick(Sender: TObject);
+begin
+bdQuery.Edit;
+end;
+
+procedure TfrmModel.btnNovoClick(Sender: TObject);
+begin
+bdQuery.Append;
+end;
+
+end.

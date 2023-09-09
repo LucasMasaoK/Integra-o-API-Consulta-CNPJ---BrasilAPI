@@ -1,9 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2023/09/08 20:03:00.972,=C:\Users\Lucas Marques\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2023/09/08 20:04:17.037,D:\Estudos\Delphi\Integração API Consulta CNPJ - BrasilAPI\Forms\uPrincipal.dfm=C:\Users\Lucas Marques\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2023/09/08 20:04:17.037,D:\Estudos\Delphi\Integração API Consulta CNPJ - BrasilAPI\Forms\uPrincipal.pas=C:\Users\Lucas Marques\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2023/09/08 20:04:42.104,D:\Estudos\Delphi\Integração API Consulta CNPJ - BrasilAPI\ConsultasAPIBR.dproj=C:\Users\Lucas Marques\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+	<Transactions>
+    <Transaction>2023/09/08 20:03:00.000.972,=C:\Users\Lucas Marques\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/09/08 20:04:17.000.037,C:\Users\Lucas Marques\Documents\Embarcadero\Studio\Projects\Unit1.pas=D:\Estudos\Delphi\Integração API Consulta CNPJ - BrasilAPI\Forms\uPrincipal.pas</Transaction>
+    <Transaction>2023/09/08 20:04:17.000.037,C:\Users\Lucas Marques\Documents\Embarcadero\Studio\Projects\Unit1.dfm=D:\Estudos\Delphi\Integração API Consulta CNPJ - BrasilAPI\Forms\uPrincipal.dfm</Transaction>
+    <Transaction>2023/09/08 20:04:42.000.104,C:\Users\Lucas Marques\Documents\Embarcadero\Studio\Projects\Project1.dproj=D:\Estudos\Delphi\Integração API Consulta CNPJ - BrasilAPI\ConsultasAPIBR.dproj</Transaction>
+    <Transaction>2023/09/08 20:08:01.000.513,=D:\Estudos\Delphi\Integração API Consulta CNPJ - BrasilAPI\Unit1.pas</Transaction>
+    <Transaction>2023/09/08 20:08:25.000.358,D:\Estudos\Delphi\Integração API Consulta CNPJ - BrasilAPI\Unit1.pas=D:\Estudos\Delphi\Integração API Consulta CNPJ - BrasilAPI\Data\uDataModule.pas</Transaction>
+    <Transaction>2023/09/08 20:08:25.000.358,D:\Estudos\Delphi\Integração API Consulta CNPJ - BrasilAPI\Unit1.dfm=D:\Estudos\Delphi\Integração API Consulta CNPJ - BrasilAPI\Data\uDataModule.dfm</Transaction>
+    <Transaction>2023/09/08 20:19:16.945,=D:\Estudos\Delphi\Integração API Consulta CNPJ - BrasilAPI\Unit1.pas</Transaction>
+    <Transaction>2023/09/08 20:21:58.039,D:\Estudos\Delphi\Integração API Consulta CNPJ - BrasilAPI\Forms\uModel.pas=D:\Estudos\Delphi\Integração API Consulta CNPJ - BrasilAPI\Unit1.pas</Transaction>
+    <Transaction>2023/09/08 20:21:58.039,D:\Estudos\Delphi\Integração API Consulta CNPJ - BrasilAPI\Forms\uModel.dfm=D:\Estudos\Delphi\Integração API Consulta CNPJ - BrasilAPI\Unit1.dfm</Transaction>
   </Transactions>
 </BorlandProject>
