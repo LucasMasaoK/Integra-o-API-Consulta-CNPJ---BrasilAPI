@@ -11,12 +11,15 @@ object frmPrincipal: TfrmPrincipal
   Font.Name = 'Segoe UI'
   Font.Style = []
   Menu = menuPrincipal
+  Position = poScreenCenter
+  WindowState = wsMaximized
   TextHeight = 15
   object menuPrincipal: TMainMenu
     Left = 216
     Top = 152
     object Cliente1: TMenuItem
       Caption = 'Fornecedor'
+      OnClick = Cliente1Click
     end
   end
 end

@@ -5,8 +5,8 @@
         <FrameworkType>VCL</FrameworkType>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
-        <Platform Condition="'$(Platform)'==''">Win64</Platform>
-        <TargetedPlatforms>2</TargetedPlatforms>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>3</TargetedPlatforms>
         <AppType>Application</AppType>
         <MainSource>ConsultasAPIBR.dpr</MainSource>
     </PropertyGroup>
@@ -135,6 +135,14 @@
             <Form>frmModel</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Forms\uFornecedor.pas">
+            <Form>frmCadastroFornecedor</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Forms\uModelConsulta.pas">
+            <Form>frmModelConsulta</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -166,12 +174,6 @@
                 <DeployFile LocalName="Win64\Debug\ConsultasAPIBR.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win64">
                         <RemoteName>ConsultasAPIBR.exe</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="Win64\Debug\ConsultasAPIBR.rsm" Configuration="Debug" Class="DebugSymbols">
-                    <Platform Name="Win64">
-                        <RemoteName>ConsultasAPIBR.rsm</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -999,7 +1001,7 @@
                 <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
             </Deployment>
             <Platforms>
-                <Platform value="Win32">False</Platform>
+                <Platform value="Win32">True</Platform>
                 <Platform value="Win64">True</Platform>
             </Platforms>
         </BorlandProject>

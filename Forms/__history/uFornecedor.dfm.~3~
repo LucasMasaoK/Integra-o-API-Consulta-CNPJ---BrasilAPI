@@ -1,0 +1,366 @@
+inherited frmCadastroFornecedor: TfrmCadastroFornecedor
+  Caption = 'Cadastro Fornecedor'
+  ClientHeight = 427
+  ClientWidth = 833
+  ExplicitWidth = 845
+  ExplicitHeight = 465
+  TextHeight = 15
+  object Label1: TLabel [0]
+    Left = 16
+    Top = 16
+    Width = 105
+    Height = 15
+    Caption = 'COD_FORNECEDOR'
+    FocusControl = DBEdit1
+  end
+  object Label3: TLabel [1]
+    Left = 16
+    Top = 67
+    Width = 75
+    Height = 15
+    Caption = 'FORN_RAZAO'
+    FocusControl = DBEdit3
+  end
+  object Label4: TLabel [2]
+    Left = 16
+    Top = 288
+    Width = 95
+    Height = 15
+    Caption = 'FORN_ENDERECO'
+    FocusControl = DBEdit4
+  end
+  object Label5: TLabel [3]
+    Left = 488
+    Top = 288
+    Width = 71
+    Height = 15
+    Caption = 'COD_BAIRRO'
+    FocusControl = DBEdit5
+  end
+  object Label6: TLabel [4]
+    Left = 584
+    Top = 288
+    Width = 71
+    Height = 15
+    Caption = 'COD_CIDADE'
+    FocusControl = DBEdit6
+  end
+  object Label7: TLabel [5]
+    Left = 692
+    Top = 288
+    Width = 57
+    Height = 15
+    Caption = 'FORN_CEP'
+    FocusControl = DBEdit7
+  end
+  object Label8: TLabel [6]
+    Left = 488
+    Top = 237
+    Width = 66
+    Height = 15
+    Caption = 'FORN_FONE'
+    FocusControl = DBEdit8
+  end
+  object Label12: TLabel [7]
+    Left = 16
+    Top = 168
+    Width = 63
+    Height = 15
+    Caption = 'FORN_CNPJ'
+    FocusControl = DBEdit12
+  end
+  object Label13: TLabel [8]
+    Left = 488
+    Top = 176
+    Width = 45
+    Height = 15
+    Caption = 'FORN_IE'
+    FocusControl = DBEdit13
+  end
+  object Label21: TLabel [9]
+    Left = 16
+    Top = 115
+    Width = 52
+    Height = 15
+    Caption = 'FANTASIA'
+    FocusControl = DBEdit21
+  end
+  object Label23: TLabel [10]
+    Left = 16
+    Top = 237
+    Width = 70
+    Height = 15
+    Caption = 'FORN_EMAIL'
+    FocusControl = DBEdit23
+  end
+  object Label27: TLabel [11]
+    Left = 144
+    Top = 16
+    Width = 68
+    Height = 15
+    Caption = 'FORN_ATIVO'
+    FocusControl = DBEdit27
+  end
+  inherited Panel1: TPanel
+    Top = 369
+    Width = 833
+    ExplicitTop = 772
+    ExplicitWidth = 1064
+    DesignSize = (
+      833
+      58)
+    inherited btnPesquisar: TBitBtn
+      Left = 741
+      ExplicitLeft = 741
+    end
+  end
+  object DBEdit1: TDBEdit [13]
+    Left = 16
+    Top = 32
+    Width = 105
+    Height = 23
+    DataField = 'COD_FORNECEDOR'
+    DataSource = SourceFornecedor
+    TabOrder = 1
+  end
+  object DBEdit3: TDBEdit [14]
+    Left = 16
+    Top = 88
+    Width = 800
+    Height = 23
+    DataField = 'FORN_RAZAO'
+    DataSource = SourceFornecedor
+    TabOrder = 2
+  end
+  object DBEdit4: TDBEdit [15]
+    Left = 16
+    Top = 307
+    Width = 409
+    Height = 23
+    DataField = 'FORN_ENDERECO'
+    DataSource = SourceFornecedor
+    TabOrder = 3
+  end
+  object DBEdit5: TDBEdit [16]
+    Left = 488
+    Top = 309
+    Width = 71
+    Height = 23
+    DataField = 'COD_BAIRRO'
+    DataSource = SourceFornecedor
+    TabOrder = 4
+  end
+  object DBEdit6: TDBEdit [17]
+    Left = 584
+    Top = 309
+    Width = 71
+    Height = 23
+    DataField = 'COD_CIDADE'
+    DataSource = SourceFornecedor
+    TabOrder = 5
+  end
+  object DBEdit7: TDBEdit [18]
+    Left = 692
+    Top = 309
+    Width = 124
+    Height = 23
+    DataField = 'FORN_CEP'
+    DataSource = SourceFornecedor
+    TabOrder = 6
+  end
+  object DBEdit8: TDBEdit [19]
+    Left = 488
+    Top = 253
+    Width = 328
+    Height = 23
+    DataField = 'FORN_FONE'
+    DataSource = SourceFornecedor
+    TabOrder = 7
+  end
+  object DBEdit12: TDBEdit [20]
+    Left = 16
+    Top = 189
+    Width = 361
+    Height = 23
+    DataField = 'FORN_CNPJ'
+    DataSource = SourceFornecedor
+    TabOrder = 8
+  end
+  object DBEdit13: TDBEdit [21]
+    Left = 488
+    Top = 192
+    Width = 328
+    Height = 23
+    DataField = 'FORN_IE'
+    DataSource = SourceFornecedor
+    TabOrder = 9
+  end
+  object DBEdit21: TDBEdit [22]
+    Left = 16
+    Top = 131
+    Width = 800
+    Height = 23
+    DataField = 'FANTASIA'
+    DataSource = SourceFornecedor
+    TabOrder = 10
+  end
+  object DBEdit23: TDBEdit [23]
+    Left = 16
+    Top = 253
+    Width = 361
+    Height = 23
+    DataField = 'FORN_EMAIL'
+    DataSource = SourceFornecedor
+    TabOrder = 11
+  end
+  object DBEdit27: TDBEdit [24]
+    Left = 144
+    Top = 32
+    Width = 68
+    Height = 23
+    DataField = 'FORN_ATIVO'
+    DataSource = SourceFornecedor
+    TabOrder = 12
+  end
+  inherited bdQuery: TFDQuery
+    SQL.Strings = (
+      'SELECT * FROM FORNECEDOR;')
+    Left = 704
+    Top = 8
+    object bdQueryCOD_FORNECEDOR: TIntegerField
+      FieldName = 'COD_FORNECEDOR'
+      Origin = 'COD_FORNECEDOR'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object bdQueryFORN_PESSOA: TIntegerField
+      FieldName = 'FORN_PESSOA'
+      Origin = 'FORN_PESSOA'
+    end
+    object bdQueryFORN_RAZAO: TStringField
+      FieldName = 'FORN_RAZAO'
+      Origin = 'FORN_RAZAO'
+      Size = 50
+    end
+    object bdQueryFORN_ENDERECO: TStringField
+      FieldName = 'FORN_ENDERECO'
+      Origin = 'FORN_ENDERECO'
+      Size = 50
+    end
+    object bdQueryCOD_BAIRRO: TIntegerField
+      FieldName = 'COD_BAIRRO'
+      Origin = 'COD_BAIRRO'
+    end
+    object bdQueryCOD_CIDADE: TIntegerField
+      FieldName = 'COD_CIDADE'
+      Origin = 'COD_CIDADE'
+    end
+    object bdQueryFORN_CEP: TStringField
+      FieldName = 'FORN_CEP'
+      Origin = 'FORN_CEP'
+      Size = 8
+    end
+    object bdQueryFORN_FONE: TStringField
+      FieldName = 'FORN_FONE'
+      Origin = 'FORN_FONE'
+      Size = 15
+    end
+    object bdQueryFORN_FAX: TStringField
+      FieldName = 'FORN_FAX'
+      Origin = 'FORN_FAX'
+      Size = 15
+    end
+    object bdQueryFORN_CONTATO: TStringField
+      FieldName = 'FORN_CONTATO'
+      Origin = 'FORN_CONTATO'
+      Size = 30
+    end
+    object bdQueryFORN_ABC: TStringField
+      FieldName = 'FORN_ABC'
+      Origin = 'FORN_ABC'
+      FixedChar = True
+      Size = 1
+    end
+    object bdQueryFORN_CNPJ: TStringField
+      FieldName = 'FORN_CNPJ'
+      Origin = 'FORN_CNPJ'
+      Size = 15
+    end
+    object bdQueryFORN_IE: TStringField
+      FieldName = 'FORN_IE'
+      Origin = 'FORN_IE'
+    end
+    object bdQueryFORN_OBSERVACAO: TStringField
+      FieldName = 'FORN_OBSERVACAO'
+      Origin = 'FORN_OBSERVACAO'
+      Size = 50
+    end
+    object bdQueryCOD_TRANSPORTADORA: TIntegerField
+      FieldName = 'COD_TRANSPORTADORA'
+      Origin = 'COD_TRANSPORTADORA'
+    end
+    object bdQueryFORN_JUROS: TCurrencyField
+      FieldName = 'FORN_JUROS'
+      Origin = 'FORN_JUROS'
+    end
+    object bdQueryCOD_CONDPAGTO: TIntegerField
+      FieldName = 'COD_CONDPAGTO'
+      Origin = 'COD_CONDPAGTO'
+    end
+    object bdQueryFORN_ABCPERC: TCurrencyField
+      FieldName = 'FORN_ABCPERC'
+      Origin = 'FORN_ABCPERC'
+    end
+    object bdQueryCOD_REPRESENTANTE: TIntegerField
+      FieldName = 'COD_REPRESENTANTE'
+      Origin = 'COD_REPRESENTANTE'
+    end
+    object bdQueryTIPO_FORNECEDOR: TStringField
+      FieldName = 'TIPO_FORNECEDOR'
+      Origin = 'TIPO_FORNECEDOR'
+      FixedChar = True
+      Size = 1
+    end
+    object bdQueryFANTASIA: TStringField
+      FieldName = 'FANTASIA'
+      Origin = 'FANTASIA'
+      Size = 100
+    end
+    object bdQueryFORN_URL: TStringField
+      FieldName = 'FORN_URL'
+      Origin = 'FORN_URL'
+      Size = 100
+    end
+    object bdQueryFORN_EMAIL: TStringField
+      FieldName = 'FORN_EMAIL'
+      Origin = 'FORN_EMAIL'
+      Size = 100
+    end
+    object bdQueryFORN_TELEFONE_RAMAL: TStringField
+      FieldName = 'FORN_TELEFONE_RAMAL'
+      Origin = 'FORN_TELEFONE_RAMAL'
+      Size = 8
+    end
+    object bdQueryCOD_CCONTABIL: TIntegerField
+      FieldName = 'COD_CCONTABIL'
+      Origin = 'COD_CCONTABIL'
+    end
+    object bdQueryCOD_SPED: TIntegerField
+      FieldName = 'COD_SPED'
+      Origin = 'COD_SPED'
+    end
+    object bdQueryFORN_ATIVO: TIntegerField
+      FieldName = 'FORN_ATIVO'
+      Origin = 'FORN_ATIVO'
+    end
+    object bdQueryIND_CONTRIBUINTE: TIntegerField
+      FieldName = 'IND_CONTRIBUINTE'
+      Origin = 'IND_CONTRIBUINTE'
+    end
+  end
+  object SourceFornecedor: TDataSource
+    DataSet = bdQuery
+    Left = 648
+    Top = 8
+  end
+end
