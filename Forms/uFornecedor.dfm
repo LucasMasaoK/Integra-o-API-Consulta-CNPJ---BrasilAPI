@@ -1,6 +1,10 @@
 inherited frmCadastroFornecedor: TfrmCadastroFornecedor
   Caption = 'Cadastro Fornecedor'
   ClientHeight = 442
+  ClientWidth = 848
+  ExplicitLeft = -30
+  ExplicitTop = -36
+  ExplicitWidth = 864
   TextHeight = 15
   object Label1: TLabel [0]
     Left = 16
@@ -24,7 +28,7 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
     Width = 95
     Height = 15
     Caption = 'FORN_ENDERECO'
-    FocusControl = DBEdit4
+    FocusControl = editEndereco
   end
   object Label5: TLabel [3]
     Left = 488
@@ -32,7 +36,7 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
     Width = 71
     Height = 15
     Caption = 'COD_BAIRRO'
-    FocusControl = DBEdit5
+    FocusControl = editBairro
   end
   object Label6: TLabel [4]
     Left = 584
@@ -40,7 +44,7 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
     Width = 71
     Height = 15
     Caption = 'COD_CIDADE'
-    FocusControl = DBEdit6
+    FocusControl = editCidade
   end
   object Label7: TLabel [5]
     Left = 692
@@ -48,7 +52,7 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
     Width = 57
     Height = 15
     Caption = 'FORN_CEP'
-    FocusControl = DBEdit7
+    FocusControl = editCEP
   end
   object Label8: TLabel [6]
     Left = 488
@@ -56,7 +60,7 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
     Width = 66
     Height = 15
     Caption = 'FORN_FONE'
-    FocusControl = DBEdit8
+    FocusControl = editTelefone
   end
   object Label12: TLabel [7]
     Left = 16
@@ -80,7 +84,7 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
     Width = 52
     Height = 15
     Caption = 'FANTASIA'
-    FocusControl = DBEdit21
+    FocusControl = editFantasia
   end
   object Label23: TLabel [10]
     Left = 16
@@ -88,7 +92,7 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
     Width = 70
     Height = 15
     Caption = 'FORN_EMAIL'
-    FocusControl = DBEdit23
+    FocusControl = editEmail
   end
   object Label27: TLabel [11]
     Left = 144
@@ -100,6 +104,7 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
   end
   inherited Panel1: TPanel
     Top = 384
+    Width = 848
     inherited btnPesquisar: TBitBtn
       Left = 741
       ExplicitLeft = 741
@@ -124,7 +129,7 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
     DataSource = sourceFornecedor
     TabOrder = 2
   end
-  object DBEdit4: TDBEdit [15]
+  object editEndereco: TDBEdit [15]
     Left = 16
     Top = 307
     Width = 409
@@ -133,7 +138,7 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
     DataSource = sourceFornecedor
     TabOrder = 3
   end
-  object DBEdit5: TDBEdit [16]
+  object editBairro: TDBEdit [16]
     Left = 488
     Top = 309
     Width = 71
@@ -142,7 +147,7 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
     DataSource = sourceFornecedor
     TabOrder = 4
   end
-  object DBEdit6: TDBEdit [17]
+  object editCidade: TDBEdit [17]
     Left = 584
     Top = 309
     Width = 71
@@ -151,7 +156,7 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
     DataSource = sourceFornecedor
     TabOrder = 5
   end
-  object DBEdit7: TDBEdit [18]
+  object editCEP: TDBEdit [18]
     Left = 692
     Top = 309
     Width = 124
@@ -160,7 +165,7 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
     DataSource = sourceFornecedor
     TabOrder = 6
   end
-  object DBEdit8: TDBEdit [19]
+  object editTelefone: TDBEdit [19]
     Left = 488
     Top = 253
     Width = 328
@@ -176,6 +181,7 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
     Height = 23
     DataField = 'FORN_CNPJ'
     DataSource = sourceFornecedor
+    MaxLength = 18
     TabOrder = 8
     OnExit = editCNPJExit
   end
@@ -186,25 +192,25 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
     Height = 23
     DataField = 'FORN_IE'
     DataSource = sourceFornecedor
-    TabOrder = 9
+    TabOrder = 10
   end
-  object DBEdit21: TDBEdit [22]
+  object editFantasia: TDBEdit [22]
     Left = 16
     Top = 195
     Width = 800
     Height = 23
     DataField = 'FANTASIA'
     DataSource = sourceFornecedor
-    TabOrder = 10
+    TabOrder = 11
   end
-  object DBEdit23: TDBEdit [23]
+  object editEmail: TDBEdit [23]
     Left = 16
     Top = 253
     Width = 409
     Height = 23
     DataField = 'FORN_EMAIL'
     DataSource = sourceFornecedor
-    TabOrder = 11
+    TabOrder = 12
   end
   object DBEdit27: TDBEdit [24]
     Left = 144
@@ -213,7 +219,7 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
     Height = 23
     DataField = 'FORN_ATIVO'
     DataSource = sourceFornecedor
-    TabOrder = 12
+    TabOrder = 13
   end
   object btnConsultaPJ: TButton [25]
     Left = 328
@@ -222,24 +228,15 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
     Height = 25
     Caption = 'Carregar Dados'
     Enabled = False
-    TabOrder = 13
+    TabOrder = 9
     OnClick = btnConsultaPJClick
-  end
-  object Memo1: TMemo [26]
-    Left = 369
-    Top = 176
-    Width = 185
-    Height = 156
-    Lines.Strings = (
-      'Memo1')
-    TabOrder = 14
   end
   inherited bdQuery: TFDQuery
     Active = True
     SQL.Strings = (
       'SELECT * FROM FORNECEDOR;')
-    Left = 560
-    Top = 9
+    Left = 592
+    Top = 1
     object bdQueryCOD_FORNECEDOR: TIntegerField
       FieldName = 'COD_FORNECEDOR'
       Origin = 'COD_FORNECEDOR'
@@ -297,6 +294,7 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
     object bdQueryFORN_CNPJ: TStringField
       FieldName = 'FORN_CNPJ'
       Origin = 'FORN_CNPJ'
+      EditMask = '00.000.000/0000-00;0;_'
       Size = 15
     end
     object bdQueryFORN_IE: TStringField
@@ -394,5 +392,21 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
     ContentType = 'application/json'
     Left = 552
     Top = 392
+  end
+  object bairroQuery: TFDQuery
+    Active = True
+    Connection = DataModule1.bdConexao
+    SQL.Strings = (
+      'SELECT * FROM bairros ;')
+    Left = 664
+    Top = 8
+  end
+  object cidadeQuery: TFDQuery
+    Active = True
+    Connection = DataModule1.bdConexao
+    SQL.Strings = (
+      'SELECT * FROM CIDADES;')
+    Left = 424
+    Top = 8
   end
 end

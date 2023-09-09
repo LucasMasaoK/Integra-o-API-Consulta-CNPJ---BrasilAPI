@@ -48,30 +48,31 @@ type
     Label3: TLabel;
     editRazao: TDBEdit;
     Label4: TLabel;
-    DBEdit4: TDBEdit;
+    editEndereco: TDBEdit;
     Label5: TLabel;
-    DBEdit5: TDBEdit;
+    editBairro: TDBEdit;
     Label6: TLabel;
-    DBEdit6: TDBEdit;
+    editCidade: TDBEdit;
     Label7: TLabel;
-    DBEdit7: TDBEdit;
+    editCEP: TDBEdit;
     Label8: TLabel;
-    DBEdit8: TDBEdit;
+    editTelefone: TDBEdit;
     Label12: TLabel;
     editCNPJ: TDBEdit;
     Label13: TLabel;
     DBEdit13: TDBEdit;
     Label21: TLabel;
-    DBEdit21: TDBEdit;
+    editFantasia: TDBEdit;
     Label23: TLabel;
-    DBEdit23: TDBEdit;
+    editEmail: TDBEdit;
     Label27: TLabel;
     DBEdit27: TDBEdit;
     btnConsultaPJ: TButton;
     restClient: TRESTClient;
     restRequest: TRESTRequest;
     restResponse: TRESTResponse;
-    Memo1: TMemo;
+    bairroQuery: TFDQuery;
+    cidadeQuery: TFDQuery;
     procedure editCNPJExit(Sender: TObject);
     procedure btnConsultaPJClick(Sender: TObject);
   private
@@ -104,6 +105,20 @@ begin
             as TJSONObject;
           for i := 0 to restObject.Size do
           begin
+          editRazao.Text:=restObject.GetValue<String>('razao_social');
+          editFantasia.Text:=restObject.GetValue<String>('nome_fantasia');
+          editTelefone.Text:=restObject.GetValue<String>('ddd_telefone_1');
+          editEndereco.Text:=restObject.GetValue<String>('logradouro')+', Nº '+restObject.GetValue<String>('numero');
+          editCEP.Text:=restObject.GetValue<String>('cep');
+          if bairroQuery.Locate('BAI_DESCRICAO',restObject.GetValue<String>('bairro')) then
+          begin
+          editBairro.Text:=INTTOSTR(bairroQuery.FieldByName('COD_BAIRRO').ASINTEGER);
+          end;
+
+          if cidadeQuery.Locate('CID_DESCRICAO',restObject.GetValue<String>('municipio')) then
+          begin
+          editCidade.Text:=INTTOSTR(cidadeQuery.FieldByName('COD_CIDADE').ASINTEGER);
+          end;
 
           end
         end
