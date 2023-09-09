@@ -6,13 +6,16 @@ uses
   uDataModule in 'Data\uDataModule.pas' {DataModule1: TDataModule},
   uModel in 'Forms\uModel.pas' {frmModel},
   uFornecedor in 'Forms\uFornecedor.pas' {frmCadastroFornecedor},
-  uModelConsulta in 'Forms\uModelConsulta.pas' {frmModelConsulta};
+  uModelConsulta in 'Forms\uModelConsulta.pas' {frmModelConsulta},
+  Vcl.Themes,
+  Vcl.Styles;
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
+  TStyleManager.TrySetStyle('Light');
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
   Application.CreateForm(TDataModule1, DataModule1);
   Application.CreateForm(TfrmModel, frmModel);

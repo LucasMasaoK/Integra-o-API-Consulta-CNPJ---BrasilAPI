@@ -3,12 +3,14 @@ unit uFornecedor;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uModel, FireDAC.Stan.Intf,
   FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
   Vcl.StdCtrls, Vcl.Mask, Vcl.ExtCtrls, Vcl.DBCtrls, Data.DB,
-  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Buttons;
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Buttons, REST.Types,
+  REST.Client, Data.Bind.Components, Data.Bind.ObjectScope, System.json;
 
 type
   TfrmCadastroFornecedor = class(TfrmModel)
@@ -42,9 +44,9 @@ type
     bdQueryIND_CONTRIBUINTE: TIntegerField;
     Label1: TLabel;
     DBEdit1: TDBEdit;
-    SourceFornecedor: TDataSource;
+    sourceFornecedor: TDataSource;
     Label3: TLabel;
-    DBEdit3: TDBEdit;
+    editRazao: TDBEdit;
     Label4: TLabel;
     DBEdit4: TDBEdit;
     Label5: TLabel;
@@ -56,7 +58,7 @@ type
     Label8: TLabel;
     DBEdit8: TDBEdit;
     Label12: TLabel;
-    DBEdit12: TDBEdit;
+    editCNPJ: TDBEdit;
     Label13: TLabel;
     DBEdit13: TDBEdit;
     Label21: TLabel;
@@ -66,6 +68,12 @@ type
     Label27: TLabel;
     DBEdit27: TDBEdit;
     btnConsultaPJ: TButton;
+    restClient: TRESTClient;
+    restRequest: TRESTRequest;
+    restResponse: TRESTResponse;
+    Memo1: TMemo;
+    procedure editCNPJExit(Sender: TObject);
+    procedure btnConsultaPJClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -78,5 +86,42 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfrmCadastroFornecedor.btnConsultaPJClick(Sender: TObject);
+var
+  restObject: TJSONObject;
+  i: integer;
+begin
+  try
+    restClient.BaseURL := 'https://brasilapi.com.br/api/cnpj/v1/' +
+      editCNPJ.Text;
+    restRequest.Execute;
+  finally
+    case restResponse.StatusCode of
+      200:
+        begin
+          restObject := TJSONValue.ParseJSONValue(restResponse.Content)
+            as TJSONObject;
+          for i := 0 to restObject.Size do
+          begin
+
+          end
+        end
+    else
+      ShowMessage
+        ('ERRO! Não foi possível carregar os dados. Contate o Suporte!');
+    end;
+  end;
+
+end;
+
+procedure TfrmCadastroFornecedor.editCNPJExit(Sender: TObject);
+begin
+  if editCNPJ.Text <> EmptyStr then
+  begin
+    btnConsultaPJ.Enabled := True;
+  end;
+
+end;
 
 end.
