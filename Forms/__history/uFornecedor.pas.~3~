@@ -65,7 +65,6 @@ type
     DBEdit23: TDBEdit;
     Label27: TLabel;
     DBEdit27: TDBEdit;
-    btnConsultaPJ: TButton;
   private
     { Private declarations }
   public

@@ -15,7 +15,7 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
   end
   object Label3: TLabel [1]
     Left = 16
-    Top = 131
+    Top = 67
     Width = 75
     Height = 15
     Caption = 'FORN_RAZAO'
@@ -63,15 +63,15 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
   end
   object Label12: TLabel [7]
     Left = 16
-    Top = 73
+    Top = 168
     Width = 63
     Height = 15
     Caption = 'FORN_CNPJ'
     FocusControl = DBEdit12
   end
   object Label13: TLabel [8]
-    Left = 483
-    Top = 73
+    Left = 488
+    Top = 176
     Width = 45
     Height = 15
     Caption = 'FORN_IE'
@@ -79,7 +79,7 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
   end
   object Label21: TLabel [9]
     Left = 16
-    Top = 179
+    Top = 115
     Width = 52
     Height = 15
     Caption = 'FANTASIA'
@@ -125,7 +125,7 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
   end
   object DBEdit3: TDBEdit [14]
     Left = 16
-    Top = 152
+    Top = 88
     Width = 800
     Height = 23
     DataField = 'FORN_RAZAO'
@@ -179,17 +179,17 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
   end
   object DBEdit12: TDBEdit [20]
     Left = 16
-    Top = 94
-    Width = 297
+    Top = 189
+    Width = 361
     Height = 23
     DataField = 'FORN_CNPJ'
     DataSource = SourceFornecedor
     TabOrder = 8
   end
   object DBEdit13: TDBEdit [21]
-    Left = 483
-    Top = 94
-    Width = 332
+    Left = 488
+    Top = 192
+    Width = 328
     Height = 23
     DataField = 'FORN_IE'
     DataSource = SourceFornecedor
@@ -197,7 +197,7 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
   end
   object DBEdit21: TDBEdit [22]
     Left = 16
-    Top = 195
+    Top = 131
     Width = 800
     Height = 23
     DataField = 'FANTASIA'
@@ -207,7 +207,7 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
   object DBEdit23: TDBEdit [23]
     Left = 16
     Top = 253
-    Width = 409
+    Width = 361
     Height = 23
     DataField = 'FORN_EMAIL'
     DataSource = SourceFornecedor
@@ -222,19 +222,11 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
     DataSource = SourceFornecedor
     TabOrder = 12
   end
-  object btnConsultaPJ: TButton [25]
-    Left = 328
-    Top = 93
-    Width = 97
-    Height = 25
-    Caption = 'Carregar Dados'
-    TabOrder = 13
-  end
   inherited bdQuery: TFDQuery
     SQL.Strings = (
       'SELECT * FROM FORNECEDOR;')
-    Left = 560
-    Top = 9
+    Left = 704
+    Top = 8
     object bdQueryCOD_FORNECEDOR: TIntegerField
       FieldName = 'COD_FORNECEDOR'
       Origin = 'COD_FORNECEDOR'
@@ -368,7 +360,7 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
   end
   object SourceFornecedor: TDataSource
     DataSet = bdQuery
-    Left = 504
-    Top = 9
+    Left = 648
+    Top = 8
   end
 end

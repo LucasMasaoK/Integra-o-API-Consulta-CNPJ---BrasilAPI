@@ -180,7 +180,7 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
   object DBEdit12: TDBEdit [20]
     Left = 16
     Top = 94
-    Width = 297
+    Width = 409
     Height = 23
     DataField = 'FORN_CNPJ'
     DataSource = SourceFornecedor
@@ -221,14 +221,6 @@ inherited frmCadastroFornecedor: TfrmCadastroFornecedor
     DataField = 'FORN_ATIVO'
     DataSource = SourceFornecedor
     TabOrder = 12
-  end
-  object btnConsultaPJ: TButton [25]
-    Left = 328
-    Top = 93
-    Width = 97
-    Height = 25
-    Caption = 'Carregar Dados'
-    TabOrder = 13
   end
   inherited bdQuery: TFDQuery
     SQL.Strings = (
